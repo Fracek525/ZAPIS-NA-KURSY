@@ -37,25 +37,28 @@ function App() {
           ))}
         </ol>
 
-        <label htmlFor="Imię i nazwisko:">Imię i nazwisko</label>
-        <input className="form-control" 
-        type="text" 
-        value={name} 
-        placeholder='Imię i nazwisko'
-        onChange={(e) => setName(e.target.value)}></input>
+        <form>
+          <label htmlFor="Imię i nazwisko:">Imię i nazwisko</label>
+          <input className="form-control" 
+          type="text" 
+          value={name} 
+          placeholder='Imię i nazwisko'
+          onChange={(e) => setName(e.target.value)}></input>
 
-        <label htmlFor="Numer kursu">Numer kursu</label>
-        <input className="form-control" 
-        type="number" 
-        value={wybranyKurs}
-        onChange={(e) => setWybranyKurs(e.target.value)}></input>
-      </div>
+          <label htmlFor="Numer kursu">Numer kursu</label>
+          <input className="form-control" 
+          type="number" 
+          value={wybranyKurs}
+          onChange={(e) => setWybranyKurs(e.target.value)}></input>
+        
+          <button id="przycisk"
+          className="btn btn-primary"
+          type="submit"
+          onClick={Zapisz}
+          >Zapisz do kursu</button>
 
-      <button id="przycisk"
-      className="btn btn-primary"
-      type="submit"
-      onClick={Zapisz}
-      >Zapisz do kursu</button>
+        </form>
+    </div>
     </>
   );
 }
